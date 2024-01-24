@@ -144,6 +144,10 @@ body {
         #intro h1 {
             font-size: 3em; /* Increase font size for your name */
         }
+		body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
     </style>
 	<link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -299,6 +303,7 @@ body {
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		        <script>
+    // Smooth scrolling for anchor links
     document.addEventListener('DOMContentLoaded', function () {
         const smoothScrollLinks = document.querySelectorAll('a.scrolly');
 
@@ -315,6 +320,14 @@ body {
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Dark mode toggle
+        const body = document.body;
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
         });
     });
 </script>
