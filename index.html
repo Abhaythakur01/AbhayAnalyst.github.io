@@ -3,171 +3,94 @@
 <html>
 	<head>
 		<title>ABHAY THAKUR PORTFOLIO</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: 'Arial', sans-serif;
+				line-height: 1.6;
+				color: #333;
+			}
+	
+			header {
+				background-color: #333;
+				color: #fff;
+				padding: 15px;
+				text-align: center;
+			}
+	
+			nav {
+				background-color: #444;
+				padding: 10px;
+				text-align: center;
+			}
+	
+			nav a {
+				color: #fff;
+				text-decoration: none;
+				padding: 10px;
+				margin: 0 10px;
+			}
+	
+			#intro {
+				background: linear-gradient(45deg, #00bcd4, #0097a7);
+				color: #fff;
+				padding: 10px;
+				text-align: center;
+				transition: background-color 0.5s;
+				cursor: pointer;
+        
+            }
+			#intro:hover {
+				background-color: #006064; /* Change to your desired hover color */
+			}
+	
+			#intro h1 {
+				font-size: 3em;
+			}
+	
+			#portfolio {
+				padding: 50px;
+				background-color: #f5f5f5;
+				text-align: center;
+			}
+	
+			.portfolio-item {
+				margin-bottom: 40px;
+			}
+	
+			.portfolio-item img {
+				max-width: 100%;
+				height: auto;
+			}
+	
+			.dark-mode-toggle {
+				cursor: pointer;
+			}
+			.skills {
+				margin-top: 20px; 
+				font-size: 1.2em; 
+            }
+		</style>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<style>
-       /* Reset some default styles */
-body,
-h1, h2, h3, h4, h5, h6,
-p,
-ul, ol,
-figure {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-/* Add a box shadow and padding to the main wrapper */
-#wrapper {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #fff;
-}
-
-/* Style the intro section */
-#intro {
-    text-align: center;
-}
-
-#intro h1 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-#intro p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-/* Style the navigation */
-#nav {
-    background-color: #333;
-}
-
-#nav a {
-    color: #fff;
-}
-
-#nav a:hover {
-    color: #00bcd4;
-}
-
-/* Style the header */
-#header {
-    background-color: #00bcd4;
-}
-
-#header .logo {
-    color: #fff;
-}
-
-/* Style the projects section */
-.post {
-    margin-bottom: 40px;
-}
-
-.post h2 {
-    color: #00bcd4;
-}
-
-/* Style the view project button */
-.button.large {
-    background-color: #00bcd4;
-    color: #fff;
-    border: none;
-}
-
-.button.large:hover {
-    background-color: #0097a7;
-}
-
-/* Style the footer section */
-#footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
-/* Style the contact form */
-#footer form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#footer input,
-#footer textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-}
-
-/* Style the social icons */
-.icons.alt a {
-    color: #00bcd4;
-}
-
-.icons.alt a:hover {
-    color: #0097a7;
-}
-
-/* Responsive styling for smaller screens */
-@media screen and (max-width: 768px) {
-    #wrapper {
-        padding: 10px;
-    }
-
-    #intro h1 {
-        font-size: 2em;
-    }
-
-    #footer form {
-        width: 100%;
-    }
-}
-		 #intro {
-            background: linear-gradient(45deg, #00bcd4, #0097a7); /* Gradient background */
-            color: #fff; /* Text color on the gradient background */
-            padding: 50px; /* Add padding for better readability */
-            text-align: center; /* Center align the text */
-        }
-
-        #intro h1 {
-            font-size: 3em; /* Increase font size for your name */
-        }
-		body.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
-	<link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
-					<div id="intro">
-        <h1>This is<br />
-            ABHAY THAKUR</h1>
-        <p>A data analyst skilled in SQL, Tableau, Python <a href="https://twitter.com/ajlkn"></a>  <a href="https://html5up.net"></a><br />
-            <a href="https://html5up.net/license"></a></p>
-        <ul class="actions">
-            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-        </ul>
-    </div>
+					<div id="intro" onclick="changeIntroColor()">
+						<h1>This is<br />
+							ABHAY THAKUR</h1>
+						<p class="skills">A data analyst skilled in SQL, Tableau, Python <a href="https://twitter.com/ajlkn"></a>  <a href="https://html5up.net"></a><br />
+						 <a href="https://html5up.net/license"></a></p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
 				<!-- Header -->
 					<header id="header">
@@ -189,7 +112,7 @@ body {
 				<!-- Main -->
 					<div id="main">
 
-						
+						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
 									
@@ -248,7 +171,7 @@ body {
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<!--<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -266,7 +189,32 @@ body {
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
+							</form> -->
+							<!-- Formspree Contact Form -->
+						
+							<form id="contactForm" method="post" action="https://formspree.io/f/mleqgbqa">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" id="submitButton" /></li>
+								</ul>
 							</form>
+							<div id="confirmationMessage" style="display: none;">Message sent successfully!</div>
+
+							<!-- End Formspree Contact Form -->
+
 						</section>
 						<section class="split contact">
 							<section class="alt">
@@ -291,10 +239,14 @@ body {
 						</section>
 					</footer>
 
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
 
 			</div>
 
-		
+		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -302,35 +254,135 @@ body {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		        <script>
-    // Smooth scrolling for anchor links
-    document.addEventListener('DOMContentLoaded', function () {
-        const smoothScrollLinks = document.querySelectorAll('a.scrolly');
+			<script>
+				// Smooth scrolling for anchor links
+				document.addEventListener('DOMContentLoaded', function () {
+					const smoothScrollLinks = document.querySelectorAll('a.scrolly');
+			
+					smoothScrollLinks.forEach(link => {
+						link.addEventListener('click', (event) => {
+							event.preventDefault();
+			
+							const targetId = link.getAttribute('href').substring(1);
+							const targetElement = document.getElementById(targetId);
+			
+							window.scroll({
+								top: targetElement.offsetTop - 50,
+								left: 0,
+								behavior: 'smooth'
+							});
+						});
+					});
+				});
+			
+				// Dark mode toggle
+				function toggleDarkMode() {
+					document.body.classList.toggle('dark-mode');
+				}
+				// Highlight active navigation link
+				document.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const navLinks = document.querySelectorAll('#nav a');
 
-        smoothScrollLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
+        navLinks.forEach(link => {
+            const sectionId = link.getAttribute('href').substring(1);
+            const section = document.getElementById(sectionId);
 
-                const targetId = link.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                window.scroll({
-                    top: targetElement.offsetTop - 50, // Adjusted for header height
-                    left: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Dark mode toggle
-        const body = document.body;
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+            if (section.offsetTop - 51 <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
         });
     });
-</script>
 
+    // Dynamic image loading for portfolio items
+    document.addEventListener('DOMContentLoaded', function () {
+        const portfolioItems = document.querySelectorAll('.portfolio-item img');
+
+        portfolioItems.forEach(item => {
+            item.setAttribute('loading', 'lazy');
+        });
+    });
+
+    // Form submission handler (add your own logic)
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Add your form submission logic here
+
+            // For example, display a confirmation message
+            alert('Form submitted successfully!');
+        });
+    });
+			</script>
+			
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const contactForm = document.getElementById('contactForm');
+					const submitButton = document.getElementById('submitButton');
+					const confirmationMessage = document.getElementById('confirmationMessage');
+			
+					contactForm.addEventListener('submit', async function (event) {
+						event.preventDefault();
+			
+						// Validate form inputs
+						if (!validateForm()) {
+							return;
+						}
+			
+						// Disable submit button during submission
+						submitButton.disabled = true;
+			
+						// Fetch form data
+						const formData = new FormData(contactForm);
+			
+						try {
+							// Send form data to Formspree
+							const response = await fetch(contactForm.action, {
+								method: contactForm.method,
+								body: formData,
+								headers: {
+									'Accept': 'application/json'
+								}
+							});
+			
+							// Check if the form submission was successful
+							if (response.ok) {
+								// Show confirmation message
+								confirmationMessage.style.display = 'block';
+								// Clear the form fields
+								contactForm.reset();
+							} else {
+								const data = await response.json();
+								alert(`Error: ${data.error}`);
+							}
+						} catch (error) {
+							console.error('Error sending the form:', error);
+							alert('An error occurred while sending the form.');
+						} finally {
+							// Enable submit button after submission
+							submitButton.disabled = false;
+						}
+					});
+			
+					// Form validation function
+					function validateForm() {
+						const name = document.getElementById('name').value;
+						const email = document.getElementById('email').value;
+						const message = document.getElementById('message').value;
+			
+						if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+							alert('Please fill in all fields.');
+							return false;
+						}
+			
+						return true;
+					}
+				});
+			</script>
 	</body>
 </html>
